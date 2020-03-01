@@ -22,46 +22,74 @@
                         <li class="nav-item text-center pt-3">
                             <img src="./assets/img/moi.jpg" class="smallRoundedImage" height="75" width="75">
                         </li>
-                        <li class="nav-item p-2">
+                        <li class="nav-item p-2 menu-item" 
+                            [ngClass]="{
+                                'selected-slide': isItSelectedSlide('index')
+                            }"
+                        >
                             <a class="nav-link active" (click)="setSlide('index')">
                                 <i class="fas fa-home fa-lg"></i>
-                                <span>Home</span>
+                                <span class="not-selected-slide">Home</span>
                             </a>
                         </li>
-                        <li class="nav-item p-2">
+                        <li class="nav-item p-2 menu-item"
+                            [ngClass]="{
+                                'selected-slide': isItSelectedSlide('about')
+                            }"
+                        >
                             <a class="nav-link" (click)="setSlide('about')">
                                 <i class="fas fa-user-tie fa-lg"></i>
-                                <span>About</span>
+                                <span class="not-selected-slide">About</span>
                             </a>
                         </li>
-                        <li class="nav-item p-2">
+                        <li class="nav-item p-2 menu-item"
+                            [ngClass]="{
+                                'selected-slide': isItSelectedSlide('skills')
+                            }"
+                        >
                             <a class="nav-link"  (click)="setSlide('skills')">
                               <i class="fas fa-cogs fa-lg"></i>
-                              <span>Skills</span>
+                              <span class="not-selected-slide">Skills</span>
                             </a>
                         </li>
-                        <li class="nav-item p-2">
+                        <li class="nav-item p-2 menu-item"
+                            [ngClass]="{
+                                'selected-slide': isItSelectedSlide('experience')
+                            }"
+                        >
                             <a class="nav-link"  (click)="setSlide('experience')">
                               <i class="fas fa-briefcase fa-lg"></i>
-                              <span>Experience</span>
+                              <span class="not-selected-slide">Experience</span>
                             </a>
                         </li>
-                        <li class="nav-item p-2">
+                        <li class="nav-item p-2 menu-item"
+                            [ngClass]="{
+                                'selected-slide': isItSelectedSlide('education')
+                            }"
+                        >
                             <a class="nav-link"  (click)="setSlide('education')">
                               <i class="fas fa-graduation-cap fa-lg"></i>
-                              <span>Education</span>
+                              <span class="not-selected-slide">Education</span>
                             </a>
                         </li>
-                        <!--<li class="nav-item p-2">
+                        <!--<li class="nav-item p-2 menu-item"
+                            [ngClass]="{
+                                'selected-slide': isItSelectedSlide('portfolio')
+                            }"    
+                        >
                             <a class="nav-link"  (click)="setSlide('portfolio')">
                               <i class="fas fa-folder-open fa-lg"></i>
-                              <span>Portfolio</span>
+                              <span class="not-selected-slide">Portfolio</span>
                             </a>
                         </li>-->
-                        <li class="nav-item p-2">
+                        <li class="nav-item p-2 menu-item"
+                            [ngClass]="{
+                                'selected-slide': isItSelectedSlide('contact')
+                            }"
+                        >
                             <a class="nav-link"  (click)="setSlide('contact')">
                               <i class="fas fa-at fa-lg"></i>
-                              <span>Contact</span>
+                              <span class="not-selected-slide">Contact</span>
                             </a>
                         </li>
                         <!--<li class="nav-item p-2">
@@ -83,7 +111,10 @@
                     </ul>
                 </div>
             </nav>
-            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+            <main role="main" class="col-md-9 ml-sm-auto gradient-yellow col-lg-10 px-4">
+                <p *ngIf="alert.display" class="text-center">
+                    <ngb-alert [type]="alert.type" (close)="closeAlert()">{{ alert.message }}</ngb-alert>
+                </p>
               <div *ngIf="_ === 'index'">
                 <app-index></app-index>
               </div>

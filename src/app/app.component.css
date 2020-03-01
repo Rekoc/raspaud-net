@@ -53,7 +53,33 @@
     height: 100vh;
 }
 
+/*.menu-item {
+    border-bottom: 1px solid black;
+}*/
+
 .yellow-background
 {
-    background-color: #edb73e;
+    /*background-color: #edb73e;
+    background-image: linear-gradient(90deg, #edb63e , white);*/
+    background-image: linear-gradient(90deg, rgba(237,182,62,1) 0%, rgba(237,182,62,0.844958051580007) 45%, rgba(255,255,255,1) 100%);
+    /*border-right: 4px white dotted;*/
+}
+
+/*.gradient-yellow
+{
+    /*background-image: linear-gradient(90deg, #edb63e3d , white);
+}*/
+
+.selected-slide
+{
+    color: rgb(0, 0, 168);
+    font-weight: bold; 
+    font-size: x-large;
+    text-decoration: underline overline;
+}
+
+.not-selected-slide:hover {
+    color: rgb(0, 0, 168);
+    font-weight: bold;
+    transition-delay: 60ms;
 }

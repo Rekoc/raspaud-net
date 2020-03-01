@@ -20,8 +20,13 @@ import { ContactComponent } from './contact/contact.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'raspaud-net';
+  title = 'Curriculum Vitae - RASPAUD Alexandre';
   slideName: string = 'index';
+  alert = {
+    type: 'warning',
+    message: 'Website under construction',
+    display: true
+  }
 
   constructor(private contentfulService: ContentfulService, private modalService: NgbModal) {
     // Create the Contentful client before downloading anything
@@ -38,5 +43,17 @@ export class AppComponent implements OnInit {
 
   setSlide(newSlide) {
     this.slideName = newSlide;
+  }
+
+  isItSelectedSlide(slideName: string) {
+    if (slideName === this.slideName) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  closeAlert() {
+    this.alert.display = false;
   }
 }
