@@ -1,0 +1,59 @@
+@import 'https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css';
+.roundedImage
+{
+    overflow:hidden;
+    -webkit-border-radius:200px;
+    -moz-border-radius:200px;
+    border-radius:200px;
+    width:auto;
+    height:400px;
+    float: right;
+}
+
+.smallRoundedImage
+{
+    overflow:hidden;
+    -webkit-border-radius:90px;
+    -moz-border-radius:90px;
+    border-radius:90px;
+    width:auto;
+    height:180px;
+    margin-left: -15%;
+}
+
+.company-logo
+{
+    height: 55px;
+    width: auto;
+}
+
+.no_dots
+{
+    list-style-type: none;
+}
+
+.website_img
+{
+    height: auto;
+    width: 90%;
+}
+
+.sidebar-nav
+{
+  position: fixed;
+  top: 0;
+  width: 250px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-max-height
+{
+    height: 100vh;
+}
+
+.yellow-background
+{
+    background-color: #edb73e;
+}
